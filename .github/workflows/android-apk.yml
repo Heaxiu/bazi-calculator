@@ -44,6 +44,7 @@ jobs:
       - name: Accept licenses
         run: |
           yes | sdkmanager --licenses || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
       - name: Build APK (simplified)
         run: |
