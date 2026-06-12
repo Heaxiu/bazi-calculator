@@ -38,6 +38,7 @@
   border-right: var(--border-main);
   gap: var(--space-xs);
   min-height: 240px;
+  background: var(--color-white);
 }
 
 .pillar-card:last-child {
@@ -45,7 +46,7 @@
 }
 
 .pillar-day {
-  background: rgba(139,26,26,0.04);
+  background: rgba(139,26,26,0.06);
   border-left: 3px solid var(--color-primary);
 }
 
@@ -83,6 +84,7 @@
   font-family: var(--font-kai);
   line-height: 1.2;
   position: relative;
+  color: var(--color-ink);
 }
 
 .pillar-branch {
@@ -90,6 +92,7 @@
   font-weight: 700;
   font-family: var(--font-kai);
   line-height: 1.2;
+  color: var(--color-ink);
 }
 
 .pillar-wx {
@@ -110,16 +113,16 @@
   font-size: 0.78rem;
   font-weight: 600;
   font-family: var(--font-kai);
-  opacity: 0.8;
+  color: var(--color-ink-lt);
 }
 
 .pillar-changsheng {
   font-size: 0.72rem;
   padding: 1px 6px;
   border: 1px solid var(--color-border);
-  color: var(--color-ink-dim);
+  color: var(--color-ink);
   border-radius: 2px;
-  background: var(--color-paper-dk);
+  background: var(--color-paper);
 }
 
 .pillar-nayin {
@@ -180,6 +183,7 @@
   font-family: var(--font-kai);
   font-weight: 700;
   font-size: 1rem;
+  color: var(--color-ink);
 }
 
 /* 移动端适配 */

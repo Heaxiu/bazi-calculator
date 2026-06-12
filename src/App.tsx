@@ -53,16 +53,16 @@ export default function App() {
                 <div className="result-title-row">
                   <span className="result-title">命盘推算结果</span>
                   <div className="bazi-summary">
-                    <span className="bazi-word" style={{ color: 'var(--color-mu)' }}>
+                    <span className="bazi-word" style={{ color: '#4ade80' }}>
                       {result.fourPillars.year.stem}{result.fourPillars.year.branch}
                     </span>
-                    <span className="bazi-word" style={{ color: 'var(--color-huo)' }}>
+                    <span className="bazi-word" style={{ color: '#4ade80' }}>
                       {result.fourPillars.month.stem}{result.fourPillars.month.branch}
                     </span>
-                    <span className="bazi-word" style={{ color: 'var(--color-primary)', fontWeight: 900 }}>
+                    <span className="bazi-word" style={{ color: '#4ade80', fontWeight: 900 }}>
                       {result.fourPillars.day.stem}{result.fourPillars.day.branch}
                     </span>
-                    <span className="bazi-word" style={{ color: 'var(--color-jin)' }}>
+                    <span className="bazi-word" style={{ color: '#4ade80' }}>
                       {result.fourPillars.hour.stem}{result.fourPillars.hour.branch}
                     </span>
                   </div>

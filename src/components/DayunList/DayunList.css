@@ -59,13 +59,12 @@
 .dayun-header {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   padding: var(--space-sm) var(--space-md);
   cursor: pointer;
   background: var(--color-paper-dk);
   user-select: none;
   transition: var(--transition);
-  position: relative;
 }
 
 .current-dayun .dayun-header {
@@ -77,12 +76,15 @@
 }
 
 .current-dayun-badge {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
+  display: inline-block;
+  padding: 2px 8px;
   background: var(--color-primary);
+  color: var(--color-paper);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  flex-shrink: 0;
 }
 
 .dayun-gz {

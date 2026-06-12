@@ -158,12 +158,12 @@
 
 /* AI 结果 Markdown 渲染 */
 .ai-result {
-  background: var(--color-paper);
+  background: var(--color-white);
   border: var(--border-main);
   padding: var(--space-xl);
   font-size: 0.95rem;
   line-height: 1.9;
-  color: var(--color-ink-lt);
+  color: var(--color-ink);
   position: relative;
 }
 
@@ -186,7 +186,7 @@
 }
 
 .ai-result h3 {
-  color: var(--color-ink-lt);
+  color: var(--color-ink);
   font-family: var(--font-kai);
   margin: var(--space-md) 0 var(--space-sm);
   font-size: 1rem;
@@ -194,6 +194,7 @@
 
 .ai-result p {
   margin-bottom: var(--space-sm);
+  color: var(--color-ink-lt);
 }
 
 .ai-result strong {
