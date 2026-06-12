@@ -1,0 +1,53 @@
+schema_version: 1
+module_path: ""
+title: 八字命理分析与AI批命系统
+scope:
+    - .gitignore
+    - index.html
+    - package.json
+    - package-lock.json
+    - tsconfig.json
+    - vite.config.ts
+    - src/
+    - public\favicon.svg
+    - public\icons.svg
+    - src\App.css
+    - src\App.tsx
+    - src\assets\hero.png
+    - src\assets\typescript.svg
+    - src\assets\vite.svg
+    - src\components\Analysis\Analysis.css
+    - src\components\Analysis\Analysis.tsx
+    - src\components\BaziChart\BaziChart.css
+    - src\components\BaziChart\BaziChart.tsx
+    - src\components\DayunList\DayunList.css
+    - src\components\DayunList\DayunList.tsx
+    - src\components\InputForm\InputForm.css
+    - src\components\InputForm\InputForm.tsx
+    - src\components\Layout\Footer.tsx
+    - src\components\Layout\Header.css
+    - src\components\Layout\Header.tsx
+    - src\components\WuxingChart\WuxingChart.css
+    - src\components\WuxingChart\WuxingChart.tsx
+    - src\constants\earthlyBranch.ts
+    - src\constants\heavenlyStem.ts
+    - src\constants\prompt.ts
+    - src\constants\shenshe.ts
+    - src\constants\wuxing.ts
+    - src\hooks\useAI.ts
+    - src\hooks\useBazi.ts
+    - src\hooks\useLocalStorage.ts
+    - src\main.tsx
+    - src\styles\animations.css
+    - src\styles\global.css
+    - src\styles\theme.css
+    - src\types\api.ts
+    - src\types\bazi.ts
+    - src\utils\bazi.ts
+    - src\utils\dayun.ts
+    - src\utils\lunarCalendar.ts
+    - src\utils\wuxing.ts
+    - src\vite-env.d.ts
+source_files: []
+depends_on: []
+related_to: []

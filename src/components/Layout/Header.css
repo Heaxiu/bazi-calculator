@@ -1,0 +1,112 @@
+.app-header {
+  background: linear-gradient(180deg, var(--color-primary-dk) 0%, var(--color-primary) 100%);
+  color: var(--color-paper);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.03) 2px,
+      rgba(255,255,255,0.03) 4px
+    );
+  pointer-events: none;
+}
+
+.header-ornament {
+  height: 4px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--color-gold-lt) 0px,
+    var(--color-gold) 8px,
+    var(--color-gold-lt) 16px
+  );
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  padding: var(--space-lg) var(--space-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.header-side-char {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.15);
+  font-family: var(--font-kai);
+  writing-mode: vertical-lr;
+  letter-spacing: 4px;
+  user-select: none;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.header-subtitle {
+  font-size: 0.8rem;
+  color: var(--color-gold-lt);
+  letter-spacing: 4px;
+  opacity: 0.9;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 2.8rem;
+  color: var(--color-paper);
+  font-family: var(--font-kai);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin: 0;
+}
+
+.title-char {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.title-char:hover {
+  transform: scale(1.1);
+  color: var(--color-gold-lt);
+}
+
+.title-divider {
+  color: var(--color-gold);
+  font-size: 1.5rem;
+  margin: 0 4px;
+}
+
+.header-tagline {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 6px;
+  font-family: var(--font-serif);
+}
+
+@media (max-width: 600px) {
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-side-char {
+    display: none;
+  }
+  .header-content {
+    padding: var(--space-md);
+  }
+}

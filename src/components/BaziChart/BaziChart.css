@@ -1,0 +1,228 @@
+.bazi-chart {
+  background: var(--color-paper);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  animation: inkSpread 0.5s ease-out forwards;
+}
+
+.chart-info-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-primary);
+  color: var(--color-paper);
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.lunar-info {
+  color: var(--color-gold-lt);
+  margin-left: auto;
+  font-size: 0.8rem;
+}
+
+/* 四柱网格 */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: var(--border-main);
+}
+
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-md) var(--space-sm);
+  border-right: var(--border-main);
+  gap: var(--space-xs);
+  min-height: 240px;
+}
+
+.pillar-card:last-child {
+  border-right: none;
+}
+
+.pillar-day {
+  background: rgba(139,26,26,0.04);
+  border-left: 3px solid var(--color-primary);
+}
+
+.pillar-label {
+  font-size: 0.75rem;
+  color: var(--color-ink-dim);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.pillar-shishen {
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.shishen-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 5px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.5);
+}
+
+.day-marker {
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  background: rgba(139,26,26,0.08) !important;
+}
+
+.pillar-stem {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: var(--font-kai);
+  line-height: 1.2;
+  position: relative;
+}
+
+.pillar-branch {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: var(--font-kai);
+  line-height: 1.2;
+}
+
+.pillar-wx {
+  font-size: 0.6rem;
+  font-family: var(--font-serif);
+  opacity: 0.7;
+  vertical-align: super;
+}
+
+.pillar-hidden {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hidden-stem {
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-kai);
+  opacity: 0.8;
+}
+
+.pillar-changsheng {
+  font-size: 0.72rem;
+  padding: 1px 6px;
+  border: 1px solid var(--color-border);
+  color: var(--color-ink-dim);
+  border-radius: 2px;
+  background: var(--color-paper-dk);
+}
+
+.pillar-nayin {
+  font-size: 0.68rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.pillar-shenshe {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+
+.shenshe-tag {
+  font-size: 0.65rem;
+  padding: 1px 4px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.shenshe-tag.auspicious {
+  color: var(--color-primary);
+  background: rgba(139,26,26,0.08);
+  border: 1px solid rgba(139,26,26,0.2);
+}
+
+.shenshe-tag.inauspicious {
+  color: var(--color-ink-dim);
+  background: rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border-lt);
+}
+
+/* 附属信息 */
+.extra-info {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-paper-dk);
+  flex-wrap: wrap;
+}
+
+.info-gz {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.85rem;
+}
+
+.info-gz-label {
+  color: var(--color-ink-dim);
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.info-gz-val {
+  font-family: var(--font-kai);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+  .pillar-card {
+    padding: var(--space-xs) 2px;
+    min-height: 180px;
+  }
+  .pillar-stem,
+  .pillar-branch {
+    font-size: 1.6rem;
+  }
+  .chart-info-bar {
+    gap: var(--space-sm);
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+  .lunar-info {
+    width: 100%;
+    margin-left: 0;
+  }
+  .shenshe-tag {
+    font-size: 0.58rem;
+    padding: 1px 2px;
+  }
+  .extra-info {
+    padding: var(--space-xs) var(--space-sm);
+    gap: var(--space-sm);
+  }
+  .info-gz-val {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pillar-card:nth-child(2) {
+    border-right: none;
+  }
+  .pillar-card:nth-child(1),
+  .pillar-card:nth-child(2) {
+    border-bottom: var(--border-main);
+  }
+}

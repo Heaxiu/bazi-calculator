@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+:root {
+  /* 主色调 */
+  --color-primary:      #8b1a1a;
+  --color-primary-lt:   #c0392b;
+  --color-primary-dk:   #5a1010;
+  --color-gold:         #b8960c;
+  --color-gold-lt:      #d4a017;
+  --color-ink:          #1a1a1a;
+  --color-ink-lt:       #3d3d3d;
+  --color-ink-dim:      #666;
+  --color-paper:        #f5f0e8;
+  --color-paper-dk:     #ede5d0;
+  --color-paper-dkr:    #ddd0b8;
+  --color-border:       #c4a882;
+  --color-border-lt:    #ddd0b8;
+  --color-white:        #fff;
+
+  /* 五行色彩 */
+  --color-mu:           #2d8a4e;
+  --color-huo:          #c0392b;
+  --color-tu:           #a67c00;
+  --color-jin:          #b8860b;
+  --color-shui:         #1a3a5c;
+
+  /* 五行背景 */
+  --bg-mu:              rgba(45,138,78,0.12);
+  --bg-huo:             rgba(192,57,43,0.12);
+  --bg-tu:              rgba(166,124,0,0.12);
+  --bg-jin:             rgba(184,134,11,0.12);
+  --bg-shui:            rgba(26,58,92,0.12);
+
+  /* 字体 */
+  --font-serif:         'Noto Serif SC', 'SimSun', '宋体', serif;
+  --font-kai:           'KaiTi', '楷体', 'STKaiti', 'FangSong', serif;
+
+  /* 间距 */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:   16px;
+  --space-lg:   24px;
+  --space-xl:   40px;
+  --space-2xl:  64px;
+
+  /* 边框 */
+  --border-main:   1px solid var(--color-border);
+  --border-thick:  2px solid var(--color-border);
+  --border-gold:   1px solid var(--color-gold);
+  --radius-sm:     2px;
+  --radius-md:     4px;
+
+  /* 阴影 */
+  --shadow-sm:    0 2px 8px rgba(26,26,26,0.12);
+  --shadow-md:    0 4px 16px rgba(26,26,26,0.15), 0 0 1px rgba(139,26,26,0.1);
+  --shadow-lg:    0 8px 32px rgba(26,26,26,0.18);
+  --shadow-ink:   0 2px 8px rgba(26,26,26,0.15), 0 0 1px rgba(139,26,26,0.2);
+
+  /* 过渡 */
+  --transition:   all 0.2s ease;
+}

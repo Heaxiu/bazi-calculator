@@ -1,0 +1,185 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  line-height: 1.7;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(139,26,26,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(184,150,12,0.04) 0%, transparent 50%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 通用排版 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.4;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-serif);
+}
+
+input, select, textarea {
+  font-family: var(--font-serif);
+}
+
+/* 卷轴容器 */
+.scroll-container {
+  background: var(--color-paper);
+  border: var(--border-thick);
+  border-image: repeating-linear-gradient(
+    to right,
+    var(--color-border) 0px,
+    var(--color-gold) 4px,
+    var(--color-border) 8px
+  ) 2;
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+}
+
+/* 章节标题 */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '◆';
+  font-size: 0.7em;
+  color: var(--color-gold);
+}
+
+/* 通用标签 */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  line-height: 1.5;
+}
+
+.tag-auspicious {
+  color: var(--color-primary);
+  background: var(--bg-huo);
+  border-color: var(--color-primary);
+}
+
+.tag-inauspicious {
+  color: var(--color-ink-dim);
+  background: rgba(0,0,0,0.05);
+  border-color: var(--color-border);
+}
+
+/* 五行标签 */
+.wx-木 { color: var(--color-mu); background: var(--bg-mu); border-color: var(--color-mu); }
+.wx-火 { color: var(--color-huo); background: var(--bg-huo); border-color: var(--color-huo); }
+.wx-土 { color: var(--color-tu); background: var(--bg-tu); border-color: var(--color-tu); }
+.wx-金 { color: var(--color-jin); background: var(--bg-jin); border-color: var(--color-jin); }
+.wx-水 { color: var(--color-shui); background: var(--bg-shui); border-color: var(--color-shui); }
+
+/* 按钮基础样式 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-paper);
+  border: 2px solid var(--color-primary-dk);
+  box-shadow: 0 2px 0 var(--color-primary-dk), var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-lt);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 var(--color-primary-dk), var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 var(--color-primary-dk);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: rgba(139,26,26,0.05);
+}
+
+/* 分割线 */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0;
+  color: var(--color-border);
+  font-size: 0.8rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .scroll-container {
+    padding: var(--space-md);
+  }
+}

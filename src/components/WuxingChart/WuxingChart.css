@@ -1,0 +1,130 @@
+.wuxing-chart {
+  background: var(--color-paper);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-lg);
+}
+
+.wuxing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border-lt);
+}
+
+.body-strength {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.strength-label {
+  font-size: 0.9rem;
+  color: var(--color-ink-lt);
+  font-family: var(--font-kai);
+}
+
+.strength-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-kai);
+}
+
+.day-wuxing {
+  font-size: 0.9rem;
+  padding: 4px 12px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.chart-panel {
+  background: var(--color-paper-dk);
+  border: var(--border-main);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+.chart-panel-title {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-ink-dim);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  letter-spacing: 2px;
+}
+
+/* 喜用忌神 */
+.xiyong-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-paper-dk);
+  border: var(--border-main);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.xiyong-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.xiyong-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  min-width: 32px;
+  text-align: center;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.xiyong-title.yong {
+  color: var(--color-primary);
+  background: rgba(139,26,26,0.1);
+  border: 1px solid var(--color-primary);
+}
+
+.xiyong-title.xi {
+  color: var(--color-gold);
+  background: rgba(184,150,12,0.1);
+  border: 1px solid var(--color-gold);
+}
+
+.xiyong-title.ji {
+  color: var(--color-ink-dim);
+  background: rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
+}
+
+.xiyong-tags {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.wx-ignore {
+  color: var(--color-ink-dim);
+  background: rgba(0,0,0,0.05);
+  border-color: var(--color-border);
+}
+
+.wuxing-note {
+  font-size: 0.72rem;
+  color: var(--color-ink-dim);
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
